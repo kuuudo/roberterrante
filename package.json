@@ -1,0 +1,33 @@
+{
+  "name": "three-js-typescript-boilerplate",
+  "homepage": "https://kuuudo.github.io/roberterrante/",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy-git": "gh-pages -d dist",
+    "deploy": "vercel --prod",
+    "build:mobile": "tsc && vite build -c vite.config.mobile.js",
+    "lint": "eslint . --ext .ts,.js",
+    "format": "prettier --write .",
+    "test": "vitest",
+    "start": "vite"
+  },
+  "devDependencies": {
+    "@types/dat.gui": "^0.7.13",
+    "@types/howler": "^2.2.12",
+    "@types/three": "^0.174.0",
+    "dat.gui": "^0.7.9",
+    "three": "^0.174.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "gsap": "^3.12.7",
+    "howler": "^2.2.4"
+  }
+}
