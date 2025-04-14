@@ -85,20 +85,20 @@ export function initApp(isMobile: boolean) {
   const gltfLoader = new GLTFLoader();
   
   // Load the maze model
-  gltfLoader.load('models/Robert/2_Robert\'s_Maze_Portfolio.glb', (gltf) => {
+  gltfLoader.load('./models/Robert/2_Robert\'s_Maze_Portfolio.glb', (gltf) => {
     gltf.scene.position.set(0, 0, 0);
     scene.add(gltf.scene);
   });
 
   // Load the wall model
-  gltfLoader.load('models/Robert/wall.glb', (gltf) => {
+  gltfLoader.load('./models/Robert/wall.glb', (gltf) => {
     gltf.scene.position.set(0, 0, 0);
     scene.add(gltf.scene);
     console.log("Wall loaded successfully");
   });
 
   // Load the character model
-  gltfLoader.load('models/Robert/main character.glb', (gltf) => {
+  gltfLoader.load('./models/Robert/main character.glb', (gltf) => {
     character = gltf.scene;
     character.position.set(-0.7, 0, 0);
     scene.add(character);
@@ -739,7 +739,7 @@ export function initApp(isMobile: boolean) {
         scene.add(stars);
       } else {
         // Restore the day scene
-        new RGBELoader().load('img/venice_sunset_1k.hdr', function (texture) {
+        new RGBELoader().load('./img/venice_sunset_1k.hdr', function (texture) {
           texture.mapping = THREE.EquirectangularReflectionMapping;
           scene.environment = texture;
           scene.background = texture;
